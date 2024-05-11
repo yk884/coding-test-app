@@ -1,0 +1,39 @@
+.dashboardWrapper {
+  width: 100%;
+  background-color: #f1f5f9;
+  background-repeat: repeat;
+  background-position: center;
+  height: 100vh;
+  .header {
+    background-color: #1e293b;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px 10px 16px;
+    height: 48px;
+    margin-bottom: 40px;
+    h2 {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .userInfo {
+      display: flex;
+      .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+      }
+      .userEmail {
+        color: #fff;
+        font-size: 16px;
+      }
+    }
+  }
+  .chartContainer {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
