@@ -1,0 +1,88 @@
+.loginWrapper {
+  width: 100%;
+  background-color: #f1f5f9;
+  background-repeat: repeat;
+  background-position: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.loginForm {
+  background-color: #fff;
+  padding: 40px 80px;
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  border: none;
+  filter: drop-shadow(0px 2px 12px rgba(0, 0, 0, 0.1));
+  .inputTitle {
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  h2 {
+    font-weight: 700;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .loginFormInputContainer {
+    margin-bottom: 24px;
+    input {
+      border: #94a3b8 1px solid;
+      border-radius: 8px;
+      width: 100%;
+      padding: 10px 12px;
+    }
+  }
+  .loginFormInputContainer:nth-last-of-type(1) {
+    margin-bottom: 0;
+  }
+  .button {
+    margin-top: 40px;
+    background-color: #2563eb;
+    color: #fff;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+    cursor: pointer;
+    &:active {
+      filter: brightness(0.8);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .loginWrapper {
+    padding-top: 40px;
+  }
+  .loginForm {
+    width: 300px;
+    padding: 20px 15px;
+    .inputTitle {
+      margin-bottom: 4px;
+    }
+    h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 14px;
+    }
+    .loginFormInputContainer {
+      margin-bottom: 16px;
+    }
+    .button {
+      margin-top: 20px;
+    }
+  }
+}
