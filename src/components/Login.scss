@@ -7,12 +7,13 @@
   padding-bottom: 200px;
   display: flex;
   justify-content: center;
+  min-height: 100vh;
 }
-
 .loginForm {
   background-color: #fff;
   padding: 40px 80px;
   width: 480px;
+  height: 410px;
   display: flex;
   flex-direction: column;
   border-radius: 12px;
@@ -68,6 +69,7 @@
   .loginForm {
     width: 300px;
     padding: 20px 15px;
+    height: 320px;
     .inputTitle {
       margin-bottom: 4px;
     }
