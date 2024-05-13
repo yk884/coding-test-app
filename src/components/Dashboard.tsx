@@ -12,6 +12,7 @@ import {
   LineElement,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
+import Header from "./Header";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement);
 
@@ -67,7 +68,9 @@ const Dashboard = () => {
         );
         const data = response.data.result.changes[0].data;
         const labels = data.map((item: { year: number }) => item.year);
-        const values = data.map((item: { value: number }) => item.value * 1000);
+        const values = data.map(
+          (item: { value: number }) => item.value * 10000
+        );
 
         // console.log("Fetched data:", response.data);
 
@@ -171,17 +174,7 @@ const Dashboard = () => {
   return (
     <div>
       <div className="dashboardWrapper">
-        <div className="header">
-          <h2>タイトル</h2>
-          <div className="userInfo">
-            <div className="icon">
-              <img src={avator} alt="" />
-            </div>
-            <div className="userEmail">
-              <p>{email}</p>
-            </div>
-          </div>
-        </div>
+        <Header email={email} />
         <div className="flexContainer">
           {/* side menu */}
           <div className={`sideMenu ${showSideMenu ? "show" : "hide"}`}>
