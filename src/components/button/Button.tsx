@@ -5,11 +5,20 @@ type ButtonProps = {
   onClick: MouseEventHandler<HTMLButtonElement>;
   children: ReactNode;
   className?: string;
+  theme?: "Basic" | "Primary";
 };
 
-const Button = ({ onClick, children, className = "" }: ButtonProps) => {
+const Button = ({
+  onClick,
+  children,
+  className = "",
+  theme = "Basic",
+}: ButtonProps) => {
   return (
-    <button className={`button ${className}`} onClick={onClick}>
+    <button
+      className={`button ${className} ${theme.toLowerCase()}Theme`}
+      onClick={onClick}
+    >
       {children}
     </button>
   );

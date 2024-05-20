@@ -1,6 +1,8 @@
+@import "../../styles/variables";
+
 .loginWrapper {
   width: 100%;
-  background-color: #f1f5f9;
+  background-color: $slate-100;
   background-repeat: repeat;
   background-position: center;
   padding-top: 200px;
@@ -35,7 +37,7 @@
   .loginFormInputContainer {
     margin-bottom: 24px;
     input {
-      border: #94a3b8 1px solid;
+      border: $slate-400 1px solid;
       border-radius: 8px;
       width: 100%;
       padding: 10px 12px;
@@ -46,19 +48,8 @@
   }
   .button {
     margin-top: 40px;
-    background-color: #2563eb;
-    color: #fff;
     padding-top: 12px;
     padding-bottom: 12px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 700;
-    width: 100%;
-    cursor: pointer;
-    &:active {
-      filter: brightness(0.8);
-    }
   }
 }
 

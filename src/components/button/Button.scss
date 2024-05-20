@@ -1,16 +1,52 @@
+@import "../../styles/variables";
+
 .button {
   padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  border: #fff solid 2px;
+  color: #fff;
+  border-radius: 8px;
   font-size: 16px;
-}
+  font-weight: 700;
+  width: 100%;
+  cursor: pointer;
+  &.basicTheme {
+    background-color: $slate-100;
+    color: $slate-700;
+    border: 1px solid $slate-400;
+    &:hover {
+      background-color: $slate-200;
+    }
+    &:focus {
+      background-color: $slate-100;
+    }
+    &:active {
+      background-color: $slate-300;
+    }
+    &:disabled {
+      background-color: $slate-100;
+      opacity: 0.25;
+      cursor: auto;
+    }
+  }
 
-.button.loginButton {
-  background-color: #007bff;
-  color: white;
-}
+  &.primaryTheme {
+    background-color: $blue-600;
+    color: #fff;
+    &:hover {
+      background-color: $blue-800;
+    }
 
-.button.loginButton:hover {
-  background-color: #0056b3;
+    &:focus {
+      background-color: $blue-600;
+      outline: 2px solid $blue-700;
+    }
+    &:active {
+      background-color: $blue-900;
+    }
+    &:disabled {
+      background-color: $blue-600;
+      opacity: 0.25;
+      cursor: auto;
+    }
+  }
 }
