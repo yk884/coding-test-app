@@ -36,11 +36,55 @@
   }
   .loginFormInputContainer {
     margin-bottom: 24px;
+
     input {
       border: $slate-400 1px solid;
       border-radius: 8px;
       width: 100%;
       padding: 10px 12px;
+      outline-offset: 2px;
+      &:hover {
+        border-color: $slate-500;
+      }
+      &:focus {
+        border-color: $blue-700;
+        outline: 2px solid $blue-700;
+      }
+      &:active {
+        border-color: $blue-700;
+        outline: 2px solid $blue-700;
+      }
+      &:disabled {
+        border-color: $slate-400;
+        opacity: 0.25;
+        cursor: auto;
+      }
+      &:read-only {
+        border-color: $slate-400;
+        background-color: $slate-200;
+        color: $slate-500;
+      }
+      // エラー時のスタイリング
+      &.error {
+        border-color: $rose-600;
+        background-color: $rose-50;
+      }
+      &:hover.error {
+        border-color: $rose-700;
+      }
+      &:focus.error {
+        border-color: $rose-600;
+        outline: 2px solid $rose-600;
+      }
+      &:active {
+        border-color: $blue-700;
+        outline: 2px solid $blue-700;
+      }
+    }
+    .errorMessage {
+      color: $rose-600;
+      font-size: 12px;
+      margin-top: 5px;
     }
   }
   .loginFormInputContainer:nth-last-of-type(1) {

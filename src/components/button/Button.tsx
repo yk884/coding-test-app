@@ -12,7 +12,7 @@ const Button = ({
   onClick,
   children,
   className = "",
-  theme = "Basic",
+  theme = "Primary",
 }: ButtonProps) => {
   return (
     <button

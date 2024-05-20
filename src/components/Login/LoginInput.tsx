@@ -1,4 +1,4 @@
-import React, { ChangeEventHandler } from "react";
+import React, { ChangeEventHandler, useEffect, useState } from "react";
 
 type LoginInputProps = {
   label: string;
@@ -15,6 +15,11 @@ const LoginInput = ({
   value,
   onChange,
 }: LoginInputProps) => {
+  const [isError, setIsError] = useState(false);
+  useEffect(() => {
+    setIsError(value.length === 1);
+  }, [value]);
+
   return (
     <div className="loginFormInputContainer">
       <p className="inputTitle">{label}</p>
@@ -23,7 +28,9 @@ const LoginInput = ({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
+        className={isError ? "error" : ""}
       />
+      {isError && <p className="errorMessage">2文字以上入力してください</p>}
     </div>
   );
 };
