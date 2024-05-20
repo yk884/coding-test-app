@@ -1,5 +1,5 @@
 import React from "react";
-import avator from "../assets/images/Avatar.svg";
+import avator from "../../assets/images/Avatar.svg";
 
 type HeaderProps = {
   email: string;
@@ -7,7 +7,7 @@ type HeaderProps = {
 
 const Header: React.FC<HeaderProps> = ({ email }) => {
   return (
-    <div className="header">
+    <header className="header">
       <h2>タイトル</h2>
       <div className="userInfo">
         <div className="icon">
@@ -17,7 +17,7 @@ const Header: React.FC<HeaderProps> = ({ email }) => {
           <p>{email}</p>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
