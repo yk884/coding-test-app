@@ -18,7 +18,7 @@ const Filter: React.FC<FilterProps> = ({ params, handleRadioChange }) => {
           required
           checked={params.classification === 1}
         />
-        進学
+        <label htmlFor="classification">進学</label>
         <br />
         <input
           type="radio"
@@ -26,7 +26,7 @@ const Filter: React.FC<FilterProps> = ({ params, handleRadioChange }) => {
           value="2"
           onChange={handleRadioChange}
         />
-        就職
+        <label htmlFor="classification">就職</label>
       </div>
       <div className="filterContent matter">
         <h4>表示内容</h4>
@@ -37,7 +37,10 @@ const Filter: React.FC<FilterProps> = ({ params, handleRadioChange }) => {
           onChange={handleRadioChange}
           checked={params.matter === 0}
         />
-        地元{params.classification === 1 ? <>進学</> : <>就職</>}
+        <label htmlFor="matter">
+          {" "}
+          地元{params.classification === 1 ? <>進学</> : <>就職</>}
+        </label>
         <br />
         <input
           type="radio"
@@ -45,7 +48,7 @@ const Filter: React.FC<FilterProps> = ({ params, handleRadioChange }) => {
           value="1"
           onChange={handleRadioChange}
         />
-        流出
+        <label htmlFor="matter">流出</label>
         <br />
         <input
           type="radio"
@@ -53,7 +56,7 @@ const Filter: React.FC<FilterProps> = ({ params, handleRadioChange }) => {
           value="2"
           onChange={handleRadioChange}
         />
-        流入
+        <label htmlFor="matter">流入</label>
         <br />
         <input
           type="radio"
@@ -61,7 +64,7 @@ const Filter: React.FC<FilterProps> = ({ params, handleRadioChange }) => {
           value="3"
           onChange={handleRadioChange}
         />
-        純流入
+        <label htmlFor="matter">純流入</label>
       </div>
       <div className="filterContent displayType">
         <h4>表示区分</h4>
@@ -74,7 +77,7 @@ const Filter: React.FC<FilterProps> = ({ params, handleRadioChange }) => {
               onChange={handleRadioChange}
               checked={params.displayType === 10}
             />
-            すべての大学
+            <label htmlFor="displayType">すべての大学</label>
             <br />
             <input
               type="radio"
@@ -82,7 +85,7 @@ const Filter: React.FC<FilterProps> = ({ params, handleRadioChange }) => {
               value="11"
               onChange={handleRadioChange}
             />
-            大学進学
+            <label htmlFor="displayType">大学進学</label>
             <br />
             <input
               type="radio"
@@ -90,7 +93,7 @@ const Filter: React.FC<FilterProps> = ({ params, handleRadioChange }) => {
               value="12"
               onChange={handleRadioChange}
             />
-            短期大学進学
+            <label htmlFor="displayType">短期大学進学</label>
             <br />
           </>
         )}
@@ -103,7 +106,7 @@ const Filter: React.FC<FilterProps> = ({ params, handleRadioChange }) => {
               onChange={handleRadioChange}
               checked={params.displayType === 20}
             />
-            就職
+            <label htmlFor="displayType">就職</label>
           </>
         )}
       </div>
@@ -117,7 +120,7 @@ const Filter: React.FC<FilterProps> = ({ params, handleRadioChange }) => {
           onChange={handleRadioChange}
           checked={params.gender === 0}
         />
-        総数
+        <label htmlFor="gender">総数</label>
         <br />
         <input
           type="radio"
@@ -125,7 +128,7 @@ const Filter: React.FC<FilterProps> = ({ params, handleRadioChange }) => {
           value="1"
           onChange={handleRadioChange}
         />
-        男性
+        <label htmlFor="gender">男性</label>
         <br />
         <input
           type="radio"
@@ -133,7 +136,7 @@ const Filter: React.FC<FilterProps> = ({ params, handleRadioChange }) => {
           value="2"
           onChange={handleRadioChange}
         />
-        女性
+        <label htmlFor="gender">女性</label>
       </div>
     </div>
   );

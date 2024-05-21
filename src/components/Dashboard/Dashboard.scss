@@ -95,7 +95,63 @@
   }
   input[type="radio"] {
     margin-right: 5px;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border: none;
+    background-color: #fff;
+    border: 1px solid $slate-400;
+    border-radius: 50%;
+    vertical-align: -1px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline-offset: 2px;
+    &:hover {
+      background-color: $slate-200;
+      border-color: $slate-400;
+    }
+
+    &:focus {
+      border-color: $blue-600;
+      outline: 2px solid $blue-600;
+    }
+    &:active {
+      background-color: $slate-300;
+      border-color: $slate-400;
+    }
+    &:disabled,
+    &:disabled + label {
+      opacity: 0.25;
+    }
+    // checked styles
+    &:checked {
+      background-color: $blue-600;
+    }
+    &:checked:hover {
+      background-color: $blue-700;
+    }
+    &:checked:active {
+      background-color: $blue-800;
+    }
+    &:checked:disabled,
+    &:checked:disabled + label {
+      opacity: 0.25;
+    }
   }
+
+  input[type="radio"]:checked:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff;
+    content: "";
+  }
+
   .sideMenuButton {
     display: none;
   }
